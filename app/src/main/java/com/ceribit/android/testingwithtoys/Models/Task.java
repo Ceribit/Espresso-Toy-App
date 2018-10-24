@@ -1,8 +1,8 @@
 package com.ceribit.android.testingwithtoys.Models;
 
 public class Task {
-    String title;
-    String description;
+    private String title;
+    private String description;
     int resourceID;
 
     public Task(String title, String description){
@@ -24,5 +24,10 @@ public class Task {
 
     public String getTitle() {
         return title;
+    }
+
+    @Override
+    public String toString() {
+        return title + ":" + description;
     }
 }

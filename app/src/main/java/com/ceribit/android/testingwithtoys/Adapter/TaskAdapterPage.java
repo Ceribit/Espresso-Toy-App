@@ -30,6 +30,7 @@ public class TaskAdapterPage extends AppCompatActivity implements
                     new Task("title" + i, "description" + i)
             );
         }
+
         TaskAdapter taskAdapter = new TaskAdapter(getBaseContext(), -1, tasksList);
         listView.setAdapter(taskAdapter);
         listView.setOnItemClickListener(this);

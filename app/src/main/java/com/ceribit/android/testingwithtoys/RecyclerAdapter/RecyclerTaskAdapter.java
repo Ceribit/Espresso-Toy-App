@@ -22,7 +22,7 @@ public class RecyclerTaskAdapter extends RecyclerView.Adapter<RecyclerTaskAdapte
 
     private Context mContext;
 
-    public RecyclerTaskAdapter(Context context, List<Task> tasks) {
+    RecyclerTaskAdapter(Context context, List<Task> tasks) {
         mTasks = tasks;
         mContext = context;
     }
@@ -39,11 +39,6 @@ public class RecyclerTaskAdapter extends RecyclerView.Adapter<RecyclerTaskAdapte
         return viewHolder;
     }
 
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull List payloads) {
-        super.onBindViewHolder(holder, position, payloads);
-    }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
