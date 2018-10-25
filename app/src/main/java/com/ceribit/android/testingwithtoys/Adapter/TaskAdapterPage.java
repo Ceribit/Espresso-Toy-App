@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ceribit.android.testingwithtoys.Models.Task;
@@ -40,11 +41,8 @@ public class TaskAdapterPage extends AppCompatActivity implements
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         TaskAdapter adapter= (TaskAdapter) adapterView.getAdapter();
         Task selectedTask = adapter.getItem(i);
-
-        Toast.makeText(
-                this,
-                "You clicked an item with the description: " + selectedTask.getDescription(),
-                Toast.LENGTH_LONG).show();
+        TextView titleView = view.findViewById(R.id.task_title);
+        titleView.setText(R.string.task_changed_title);
     }
 
     public void goToFourthPage(View view){

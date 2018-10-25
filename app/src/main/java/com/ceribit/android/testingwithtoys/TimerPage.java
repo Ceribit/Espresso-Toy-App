@@ -29,4 +29,20 @@ public class TimerPage extends AppCompatActivity {
         Intent intent = new Intent(this, TaskAdapterPage.class);
         startActivity(intent);
     }
+
+    public void sendTime(View view){
+        Intent sendIntent = new Intent();
+        mTimer = findViewById(R.id.timer_cm);
+
+        Long elapsedMilliseconds = SystemClock.elapsedRealtime()-mTimer.getBase();
+        String time = String.valueOf(elapsedMilliseconds / 1000);
+
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, time);
+        sendIntent.setType("text/plain");
+
+        if(sendIntent.resolveActivity(getPackageManager()) != null){
+            startActivity(sendIntent);
+        }
+    }
 }

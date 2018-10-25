@@ -67,9 +67,7 @@ public class RecyclerTaskAdapter extends RecyclerView.Adapter<RecyclerTaskAdapte
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(mContext,
-                            "You clicked position " + getLayoutPosition(),
-                            Toast.LENGTH_LONG).show();
+                    mTitleView.setText(mContext.getString(R.string.task_changed_title));
                 }
             });
         }

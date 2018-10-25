@@ -3,4 +3,6 @@
 
     <string name="task_no_title">No title provided</string>
     <string name="task_no_description">No description provided</string>
+    <string name="task_changed_title">You temporarily changed the title</string>
+    <string name="task_changed_description">You just changed the description</string>
 </resources>
